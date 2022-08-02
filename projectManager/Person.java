@@ -1,8 +1,15 @@
-package finalProjectManager;
+<<<<<<< HEAD
+// person class initializes project objects  
+
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
+package projectManager;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+<<<<<<< HEAD
+=======
 /**
  * Person class initializes objects to be used by the clients assigned to the project.
  * 
@@ -10,6 +17,7 @@ import java.util.Scanner;
  * @see Person
  * @version 4.0 2022/06/02
  */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 public class Person{
 	
 	// attribute variables
@@ -20,6 +28,9 @@ public class Person{
 	String email;
 	String physicalAddress;
 	
+<<<<<<< HEAD
+	// constructor initializes person objects
+=======
 	/**
 	 * Sole constructor.
 	 * 
@@ -31,6 +42,7 @@ public class Person{
 	 * @param physicalAddress  Their residential address, where they live.
 	 * @since version 1.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public Person(String projectName, String position, String name, String telephoneNum
 			, String email, String physicalAddress) {
 		
@@ -42,6 +54,9 @@ public class Person{
 		this.email = email;
 		this.physicalAddress = physicalAddress;
 	}
+<<<<<<< HEAD
+	// method creates new person with architect position
+=======
 	/**
 	 *  method creates new person with architect position.
 	 *  
@@ -49,6 +64,7 @@ public class Person{
 	 * @return       Person with architect position.
 	 * @since        version 1.0       
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public static Person newArchitect(String name) {	
 			
 			System.out.println("Please enter the employees and clients details");
@@ -76,6 +92,9 @@ public class Person{
 			return architect;
 			
 	}	
+<<<<<<< HEAD
+	// method creates new person with contractor position
+=======
 	/**
 	 * Method creates new person with contractor position.
 	 *  
@@ -83,6 +102,7 @@ public class Person{
 	 * @return       Person with contractor position.
 	 * @since        version 1.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public static Person newContractor(String name) {	
 			
 			System.out.print("\nEnter the contractors name:");
@@ -108,6 +128,9 @@ public class Person{
 			return contractor;
 			
 	}
+<<<<<<< HEAD
+	// method creates new person with customer position
+=======
 	/**
 	 *  Method creates new person with customer position.
 	 *  
@@ -115,6 +138,7 @@ public class Person{
 	 * @return       Person with customer position.
 	 * @since        version 1.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public static Person newCustomer(String name) {	
 			
 			System.out.print("\nEnter the customers name:");
@@ -140,6 +164,9 @@ public class Person{
 			return customer;
 			
 	}	
+<<<<<<< HEAD
+	// method updates contractors details
+=======
 	/**
 	 * Method updates contractors details.
 	 *  
@@ -147,6 +174,7 @@ public class Person{
 	 * @return        Contractor with the updated details.
 	 * @since         version 1.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public static Person contractorsDetails(Person person) {
 	    	
 	    	System.out.print("Enter the contractors new telephone number:");
@@ -167,6 +195,9 @@ public class Person{
 			return person;
 			
 	}
+<<<<<<< HEAD
+	// allows user to update any person objects details in an ArrayList 
+=======
 	/**
 	 * Allows user to update any person objects details in an ArrayList. 
 	 *  
@@ -174,6 +205,7 @@ public class Person{
 	 * @return        null
 	 * @since         version 3.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public static String updateClients(ArrayList<Person> people) {
 		
 		String client = "";
@@ -264,6 +296,9 @@ public class Person{
 		System.out.println("\nBack to main menu");
 		return null;
 	}
+<<<<<<< HEAD
+	// returns a person objects details in an easily readable manner as a string
+=======
 	/**
 	 * Returns a person objects details in an easily readable manner as a string.
 	 * 
@@ -271,6 +306,7 @@ public class Person{
 	 * @return        Details of the selected person object from the ArrayList as a string.
 	 * @since         version 3.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static String displayPerson(ArrayList<Person> people) {
     	
     	System.out.print("\nEnter the clients name:");
@@ -283,7 +319,11 @@ public class Person{
 		for (Person person : people) {
 			if (person.name.equals(name)) {
 				
+<<<<<<< HEAD
+				      details = ("\n\nproject:               "+ person.projectName
+=======
 				      details = ("\n\nproject:               "+person.projectName
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 						         + "\nname:                  "+person.name 
 						         + "\nposition:              "+person.position  
 						         + "\ntelephone number:      "+person.telephoneNum 
@@ -293,4 +333,13 @@ public class Person{
 		}
         return details; 
     }
+<<<<<<< HEAD
+	// returns person details as a string to be stored in a text file for easy extraction
+    public static String personToString(Person person) {
+    	
+		return person.projectName+", "+person.position+", "+person.name+", "+person.telephoneNum+", "+person.email+", "+
+				person.physicalAddress;
+    }
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 }

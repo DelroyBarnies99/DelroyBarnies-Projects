@@ -1,9 +1,16 @@
-package finalProjectManager;
+<<<<<<< HEAD
+// Project class initializes project objects  
+
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
+package projectManager;
 
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Locale;
 
+<<<<<<< HEAD
+=======
 /**
  * Project class initializes objects that store information on each project.
  * 
@@ -11,6 +18,7 @@ import java.util.Locale;
  * @see Project
  * @version 4.0 2022/06/02
  */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 public class Project{
 	
 	// attribute variables
@@ -27,6 +35,9 @@ public class Project{
 	private boolean completed = false;
 	private boolean upToDate = true;
 	
+<<<<<<< HEAD
+	// constructor initializes Project objects
+=======
 	/**
 	 * sole constructor initializes Project objects
 	 * 
@@ -39,6 +50,7 @@ public class Project{
 	 * @param amountPaid    The total amount paid to date.
 	 * @param deadline      The due date of the project.
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 	public Project(String name, int number, String buildingType, String address, int erf
 			    , float fee, float amountPaid, String deadline) {
 		
@@ -53,12 +65,16 @@ public class Project{
 		this.deadline = deadline;
 		
 	}
+<<<<<<< HEAD
+	// method used for creating new project objects
+=======
 	/**
 	 * Method used for creating new project objects
 	 * 
 	 * @return  A new project.
 	 * @since   version 1.0
 	 */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static Project newProject() {
 			
 			System.out.print("\nEnter the project name:");
@@ -126,6 +142,9 @@ public class Project{
 			return thisProject;
 			
 	}
+<<<<<<< HEAD
+    // method updates a projects due date
+=======
     /**
      * Method updates a projects due date.
      *  
@@ -133,6 +152,7 @@ public class Project{
      * @return         The updated project.
      * @since          version 1.0
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static Project dueDate(Project project) {
 		
 		System.out.print("Enter the new date:");
@@ -148,6 +168,9 @@ public class Project{
 		return project;
 		
 	}
+<<<<<<< HEAD
+    // method updates a projects amount paid to date
+=======
     /**
      * Method updates a projects amount paid to date.
      *  
@@ -155,6 +178,7 @@ public class Project{
      * @return         The updated project.
      * @since          version 1.0
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static Project paidToDate(Project project) {
 		
 		System.out.print("Enter the new amount paid to date:");
@@ -176,12 +200,16 @@ public class Project{
 		return project;
 		
 	}
+<<<<<<< HEAD
+    // returns a list of completed projects
+=======
     /**
      * Displays a list of completed projects.
      *  
      * @param projects  ArrayList of projects, completed projects in the ArrayList will be printed.
      * @since           version 3.0
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static void completedList(ArrayList<Project> projects) {
     	
     	System.out.print("\nCompleted Projects: ");
@@ -193,12 +221,16 @@ public class Project{
     		}
     	}
     }
+<<<<<<< HEAD
+    // returns a list of overdue projects
+=======
     /**
      * Returns a list of overdue projects.
      *  
      * @param projects  ArrayList of projects, overdue projects in the ArrayList will be printed.
      * @since version 3.0
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static void isUpToDate(ArrayList<Project> projects) {
     	
     	System.out.print("\nOverdue Projects: ");
@@ -210,6 +242,9 @@ public class Project{
     		}
     	}
     }
+<<<<<<< HEAD
+    // returns a selected projects details in an easily readable manner as a string
+=======
     /**
      * Returns a selected projects details in an easily readable manner as a string.
      * 
@@ -217,6 +252,7 @@ public class Project{
      * @return          Details of the selected project object from the ArrayList as a string.
 	 * @since           version 3.0 
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static String displayProject(ArrayList<Project> projects) {
     	
     	System.out.print("\nEnter the project name:");
@@ -242,6 +278,9 @@ public class Project{
 		// returns string
         return details; 
     }
+<<<<<<< HEAD
+    // allows user to update any project objects details in an ArrayList 
+=======
     /**
      * Allows user to update any project objects details in an ArrayList.
      * 
@@ -250,6 +289,7 @@ public class Project{
      * @return          null
      * @since           version 3.0
      */
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     public static String updateProjects(ArrayList<Project> projects, ArrayList<Person> people) {
     	
     	System.out.print("\nEnter the project name:");
@@ -410,6 +450,41 @@ public class Project{
 		System.out.println("\nBack to main menu");
 		return null;	
     }
+<<<<<<< HEAD
+    // sets upToDate as false
+    public static void setDate(Project project) {
+    	project.upToDate = false;
+    }
+    // sets finalized as true
+    public static void setFinal(Project project) {
+    	project.finalized = true;
+    }
+    // sets completed as true
+    public static void setComplete(Project project) {
+    	project.completed = true;
+    }
+    // returns project details as a string to be stored in a text file for easy extraction
+    public static String projectToString(Project project) {
+    	
+		String string = project.name+", "+project.number+", "+project.buildingType+", "+project.address+", "+project.erf+", "+
+				project.fee+", "+project.amountPaid+", "+project.deadline;
+		
+		// adds a ", completed" to the string if the project is complete
+		if (project.completed == true) {
+			string = string + ", " + "completed";
+		}
+		// adds a ", upToDate" to the string if the project is uptoDate
+		if (project.upToDate == true) {
+			string = string + ", " + "upToDate";
+		}
+		// adds a ", finalized" to the string if the project is finalized
+		if (project.finalized == true) {
+			string = string + ", " + "finalized";
+		}
+		// returns the string
+		return string;
+		       
+=======
     /**
      * Sets project as overdue.
      *  
@@ -478,5 +553,6 @@ public class Project{
     	else {
     		return false;
     	}
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     }
 }

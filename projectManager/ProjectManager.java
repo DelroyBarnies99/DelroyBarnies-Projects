@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+// this program creates,stores and manages structural engineering projects  
+
+package projectManager;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+// defines the class
+public class ProjectManager {
+	
+	// main method mainly deals with the user interface
+	public static void main(String[] args) {
+=======
 /** 
  * This program creates,stores and manages structural engineering project records records from a MYSQL database called PoisePMS 
  * through JDBC.   
@@ -5,7 +25,7 @@
  * @author  Delroy Barnies
  * @version 4.0 2022/06/02
 */
-package finalProjectManager;
+package projectManager;
 
 import java.util.Scanner;
 import java.sql.*;
@@ -29,6 +49,7 @@ public class ProjectManager {
 	 * @since        version 1.0
 	 */
 	public static void main(String[] args) throws SQLException {
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		
 		// projects ArrayList contains all Project objects
 	    ArrayList<Project> projects = new ArrayList<>();
@@ -184,9 +205,14 @@ public class ProjectManager {
 				    if (customerName.equals(person.name) && person.position.equals("customer")) {
 				    	for (Project project : projects) {
 						    if (projectName.equals(project.name)) {
+<<<<<<< HEAD
+						    	finalise(person, project);
+						    	Project.setFinal(project);
+=======
 						    	finalize(person, project);
 						    	Project.setFinal(project);
 						    	completeProject(project);
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 						    }
 				        }
 				    }
@@ -219,6 +245,20 @@ public class ProjectManager {
 				// locates the correct project from projects list and marks it as complete
 				for (Project project : projects) {
 				    if (name.equals(project.name)) {
+<<<<<<< HEAD
+				    	Project.setComplete(project);
+				    	System.out.println("The project "+project.name+" has been marked as complete.");
+				    	
+				    	// if project is not up to date
+				    	if (dueDate.equals("no")) {
+				    		// the projects upToDate value is set to false
+				    		Project.setDate(project);
+				    	}
+				    }	
+				    else {
+				    	System.out.println("This project dosent exist");
+				    }
+=======
 				    	
 				    	Project.setComplete(project);
 				    	completeProject(project);
@@ -229,22 +269,36 @@ public class ProjectManager {
 				    		Project.setDate(project);
 				    	}
 				    }	
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 				}
 		    }
 		    // displays all completed projects
 		    if (option.equals("cp")) {
 		    	
 		    	Project.completedList(projects);
+<<<<<<< HEAD
+		    	
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		    }
 		    // displays all overdue projects
             if (option.equals("op")) {
 		    	
+<<<<<<< HEAD
+		    	Project.isUpToDate(projects);
+		    	
+=======
 		    	Project.isUpToDate(projects);	
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		    }
             // allows the user to update any project in the ArrayList
             if (option.equals("up")) {
             	
             	Project.updateProjects(projects, people);
+<<<<<<< HEAD
+            		
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
             }
             // displays the selected project details in an easily readable manner
             if (option.equals("dp")) {
@@ -260,16 +314,32 @@ public class ProjectManager {
             if (option.equals("uc")) {
             	
             	Person.updateClients(people);
+<<<<<<< HEAD
+            	
+            }
+            // updates files and exits the program
+		    if (option.equals("e")) {
+		    	
+		    	// clears both projects.txt and clients.txt files
+		    	clearFiles();
+		    	
+		    	// updates the cleared files with the new projects
+=======
             }
             // updates database and exits the program
 		    if (option.equals("e")) {
 		    	
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		    	fileProjects(projects, people);
 		    	
 		    	System.out.println("Thank you!!!");
 		    }	
 	   }
 	}
+<<<<<<< HEAD
+    // method finalizes the project and writes its details to the completedProjects.txt file 
+    public static void finalise(Person customer, Project project) {
+=======
 	/**
 	 * Method finalizes the project and displays an invoice to the user if need be.
 	 *  
@@ -278,6 +348,7 @@ public class ProjectManager {
 	 * @since           version 4.0
 	 */ 
     public static void finalize(Person customer, Project project) {
+>>>>>>> 5e30e72 (Final project manager with javadoc)
     	
     	// total unpaid value of the project is calculated
     	float totalUnpaid = project.fee - project.amountPaid;
@@ -296,6 +367,112 @@ public class ProjectManager {
     			+ "\n"
     			+ "amount unpaid: R" + totalUnpaid);    
         }
+<<<<<<< HEAD
+    	
+    	// gets the currant date and time
+    	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+    	LocalDateTime now = LocalDateTime.now();  
+    	
+    	// try block writes project details to the completedProjects.txt file
+    	try {
+			
+			String filepath = "C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\completedProjects.txt";
+			FileWriter fw = new FileWriter(filepath, true);
+			fw.write(  "\n\n"+project.name + " :"+"\n"
+					 + "\nproject number:        "+project.number 
+					 + "\nbuildingType:          "+project.buildingType  
+					 + "\naddress:               "+project.address 
+					 + "\nERF:                   "+project.erf
+					 + "\namount unpaid:         "+totalUnpaid
+					 + "\ncompletion date:       "+dtf.format(now));
+			fw.close();
+		}
+		// catch block detects errors
+		catch (Exception e) {
+			System.out.println("error");
+		}			
+    			
+    }
+    // writes all projects and person info to the text files
+    private static void fileProjects(ArrayList<Project> projects, ArrayList<Person> people) {
+    	
+    	for (Project project : projects) {
+    		
+    		// try block writes every project to the projects.txt file
+    		try {
+    			
+				String filepath = "C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\projects.txt";
+				FileWriter fw = new FileWriter(filepath, true);
+				fw.write(Project.projectToString(project) + "\n");
+				fw.close();
+			}
+			// catch block detects errors
+			catch (Exception e) {
+				System.out.println("error");
+			}		
+    	}
+        for (Person person : people) {
+    		
+        	// try block writes every person to the clients.txt file
+    		try {
+				
+				String filepath = "C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\clients.txt";
+				FileWriter fw = new FileWriter(filepath, true);
+				fw.write(Person.personToString(person) + "\n");
+				fw.close();
+			}
+			// catch block detects errors
+			catch (Exception e) {
+				System.out.println("error");
+			}		
+    	}
+    }
+    // returns all projects stored in the projects.txt file as project objects in an ArrayList
+    private static ArrayList<Project> getProjects(ArrayList<Project> projects) {
+    	
+    	try {
+			// reads the projects.txt file of its contents
+			File x = new File("C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\projects.txt");
+			Scanner sc = new Scanner(x);
+			
+			// while loop iterates through each line in the project.txt file, splits the line and creates a project object 
+			while (sc.hasNextLine()) {
+				
+				String project = sc.nextLine();
+				String[] projectList;
+				projectList = project.split(", ");
+				
+				String projectName = projectList[0];
+				
+				int number = Integer.parseInt(projectList[1]);
+				
+				String buildingType = projectList[2];
+				
+				String address = projectList[3];
+				
+				int erf = Integer.parseInt(projectList[4]); 
+				
+				float fee = Float.parseFloat(projectList[5]);
+				
+				float amount = Float.parseFloat(projectList[6]);
+				
+				String deadline = projectList[7];
+				
+				Project thisProject = new Project(projectName, number, buildingType, address, erf, fee, amount, deadline);
+				
+				ArrayList<String> checkList = new ArrayList<>(Arrays.asList(projectList));
+				
+				// checks if the project is upToDate
+				if (checkList.contains("upToDate") == false) {
+					Project.setDate(thisProject);
+				}
+				// checks if the project is completed
+				if (checkList.contains("completed") == true) {
+					Project.setComplete(thisProject);
+				}
+				// checks if the projects is finalized
+				if (checkList.contains("finalized") == true) {
+=======
     }
     /**
 	 * Method takes a completed project and records its details in the completedProjects table in the database.
@@ -508,12 +685,19 @@ public class ProjectManager {
 				}
 				// checks if the projects is finalized
 				if (results.getBoolean("finalized") == true) {
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 					Project.setFinal(thisProject);
 				}
 				
 				// adds project object to the ArrayList
 				projects.add(thisProject);
 			}
+<<<<<<< HEAD
+		}
+    	// catches errors
+		catch (FileNotFoundException e) {
+			System.out.println("Error! : projects.txt file is not found");
+=======
 			// closes up connections
 			results.close();
 			connection.close();
@@ -521,10 +705,49 @@ public class ProjectManager {
     	// catches errors
 		catch (SQLException e) {
 			e.printStackTrace();
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		}
     	// returns ArrayList
 		return projects;
     }
+<<<<<<< HEAD
+    // returns people stored in the clients.txt file as person objects in an ArrayList
+    private static ArrayList<Person> getPeople(ArrayList<Person> people) {
+    	
+    	try {
+			// reads the clientss.txt file of its contents
+			File x = new File("C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\clients.txt");
+			Scanner sc = new Scanner(x);
+			
+			// while loop iterates through each line in the text file, splits the line and creates a person object
+			while (sc.hasNextLine()) {
+				
+				String project = sc.nextLine();
+				String[] peopleList;
+				peopleList = project.split(", ");
+				
+				String projectName = peopleList[0];
+				
+				String position = peopleList[1];
+				
+				String personName = peopleList[2];
+				
+				String number = peopleList[3];
+				
+				String email = peopleList[4];
+				
+				String address = peopleList[5];
+				
+				Person thisPerson = new Person(projectName, position, personName, number, email, address);
+		
+				// adds person object to the people ArrayList 
+				people.add(thisPerson);
+			}
+		}
+    	// catches errors
+		catch (FileNotFoundException e) {
+			System.out.println("Error! : projects.txt file is not found");
+=======
     /**
      * Returns people stored in the PoisePMS database as person objects in an ArrayList.
      *  
@@ -592,8 +815,31 @@ public class ProjectManager {
     	// catches errors
 		catch (SQLException e) {
 			e.printStackTrace();
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 		}
     	// returns the ArrayList 
 		return people;
     }
+<<<<<<< HEAD
+    // clears both projects.txt and clients.txt files
+    private static void clearFiles() {
+    	
+    	try {
+			PrintWriter pw = new PrintWriter("C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\projects.txt");
+			pw.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			PrintWriter pw = new PrintWriter("C:\\Users\\delro\\eclipse-workspace\\rockPaperScissors\\src\\projectManager\\clients.txt");
+			pw.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+=======
+>>>>>>> 5e30e72 (Final project manager with javadoc)
 }
