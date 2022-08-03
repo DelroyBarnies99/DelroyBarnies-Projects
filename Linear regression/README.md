@@ -11,7 +11,7 @@ sklearn. We will use linear regression to find the line of best fit for this gra
 
 ## Installation
 
-Place LinearRegression.py file along with the corresponding text files in your python text editor and run the code.
+Place LinearRegression.py file in your python text editor and run the code.
 
 ## Contributors
 
