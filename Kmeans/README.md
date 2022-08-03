@@ -1,4 +1,4 @@
-# Task Manager
+# K-means
 
 This program reads data from the csv file and uses the k-means algorithm to plot a scatter plot on the data
 
