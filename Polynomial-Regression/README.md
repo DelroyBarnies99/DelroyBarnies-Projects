@@ -12,7 +12,7 @@ lines.
 
 ## Installation
 
-Place task_manager.py file along with the corresponding text files in your python text editor and run the code.
+Place poly.py file along with the corresponding text files in your python text editor and run the code.
 
 ## Contributors
 
