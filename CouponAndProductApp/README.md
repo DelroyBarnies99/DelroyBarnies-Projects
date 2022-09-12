@@ -9,8 +9,12 @@ will be recorded in their corresponding tables in a mysql database called mydb t
 
 ## Installation
 
-Place the entire project in your eclipse workspace. Make sure you have the latest apache tomcat 10 version installed and the msql connecter jar is in the
-WEB-INF lib folder. you will need to have mysql installed on your system. run the .cmd file in your mysql workspace to set up the database and tables. Make sure the username and password is set to username and password. Lastly to start the program run the index.html file on the server.
+Place the entire project in your eclipse workspace. 
+Make sure you have the latest apache tomcat 10 version installed and the msql connecter jar is in the WEB-INF lib folder. 
+You will need to have mysql installed on your system. 
+Run the .sql file in your mysql workspace to set up the database and tables. 
+Make sure the username and password is set to username and password. 
+Lastly to start the program run the index.html file on the server.
 
 ## Contributors
 
