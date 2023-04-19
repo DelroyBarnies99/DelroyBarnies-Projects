@@ -9,6 +9,7 @@ Welcome to my Github repostiory! I developed every project here in eclipse and p
 ## Installation
 
 Place file in your python/java text editor and run the code.
+Please read the README.md file inside each project for more details on installation.
 
 ## Contributors
 
