@@ -1,21 +1,27 @@
-# loginAndRegistrationFinal
+# LoginAndRegistrationFinal
+This project uses Spring boot and Spring security to allow users to login and register and stores user information in a mysql database. 
+All passwords stored in the database are encrypted and users are provided roles for either user or admin. 
+All web pages where designed by me in HTML and CSS for styling. 
+I used Thymeleaf used for templating web pages and providing form field validations.
 
-This is my use login and registeration web application which uses spring boot 3 to autherize user logins and allows users to create accounts. These
-accounts are stores in a mysql database which are then used to authenticate the user.
 
-- Thymeleaf as a templating engine.
-- Spring security for secure logins and password protection.
-- Custom user login and create account pages.
-- Jdbc to store user information.
-
-***Spring Boot Version 3.0.5 or above***
-***Html version 5***
-***Css version 3***
+***Java Version 8 or above***
+***Html5 and Css3***
 
 
 ## Installation
 
-Place file in your spring tool suite ide's workspace and run as spring boot application.
+Here's a guide on how to import a project into spring tool suite:
+https://websparrow.org/misc/how-to-import-spring-boot-project-in-eclipse-sts-ide
+
+After importing here are the following steps:
+
+1. Import the project into spring tool suite with java ee enabled.
+2. Make sure all dependencies and starter poms are imported in the "pom.xml" file.
+3. Create the mysql database with the name as "loginandreg". 
+4. Make sure the username for the database is set to "username" and password as "password".
+4. Right click on the project and select run as spring boot project.
+5. Go to your default browser and search for "http://localhost:8080/createAccount" to create your first account.
 
 ## Contributors
 
