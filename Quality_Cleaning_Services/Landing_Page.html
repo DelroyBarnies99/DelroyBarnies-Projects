@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Landing Page</title>
+
+    <!-- styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=PT+Serif:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/location.css" />
+    <link rel="stylesheet" href="css/video.css" />
+
+</head>
+
+<body>
+
+
+    <label class="switch">
+        <input id="play-pause-button" type="checkbox" onclick="Play()">
+        <span class="slider"></span>
+    </label>
+
+    <video id="media-video" class="video-container" muted autoplay loop>
+        <source src="videos/mowing-26090.mp4" type="video/mp4" />
+    </video>
+
+    <div class="wrapper">
+
+        <section id="header">
+            <div>
+                <div class="left-section">
+                    <img src="icons/QCS_Logo.png" alt="logo" width="80" height="110">
+                </div>
+                <div class="right-section">
+                    <nav>
+                        <ul>
+                            <li><a href="#home-section">Home</a></li>
+                            <li><a href="#about-section">About</a></li>
+                            <li><a href="#location-section">Location</a></li>
+                            <li><a href="#contact-section">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <h1>Quality Cleaning Services</h1>
+        </section>
+        <a id="home-section"></a>
+
+        <section id="about">
+            <button class="about-btn1">MEET THE TEAM!<span class="about-btn1-icon"><img
+                        src="icons/185082_man_user_people_icon.svg" </span></button>
+
+
+            <div class="about-contents">
+                <div class="about-img-container1">
+                    <img class="about-image" src="images/andy-watkins-HebuILtR3yA-unsplash.jpg">
+                </div>
+
+                <div class="about-img-text-container1">
+                    <p>Here at QCS we provide high quality cleaning, grass removal and maintenance
+                        which will keep any lawn looking healthy and natural. We pride ourselves on our natural weed
+                        removal
+                        formula made in house which will kill all weeds and keep gardens fresh.</p>
+                </div>
+
+                <div class="about-img-text-container2">
+                    <h2>What we Offer:</h2>
+                    <p>Grass Cutting<br />
+                        Weed Removal<br />
+                        Natural Pesticide Spray<br />
+                        Sweeping and General yard maintenance<br /><br />
+                        Rates start from as low as R100.00 will is depend on size of land.</p>
+                </div>
+                <div class="about-img-container2">
+                    <img class="about-image" src="images/cut_lawn_2.jpeg">
+                </div>
+            </div>
+        </section>
+        <a id="about-section"></a>
+
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <input type="email" class="contact-email-input" placeholder="Your Email..."></input>
+            <textarea class="contact-textarea">...</textarea>
+            <button>Submit</button>
+        </section>
+        <a id="contact-section"></a>
+
+        <section id="location">
+            <div class="location-top">
+                <div class="location-address">
+                    <p>97 Williams Road<br />
+                        Amanzimtoti<br />
+                        4238</p>
+                </div>
+                <div class="location-contact-num">
+                    <h2>Let's get in touch<br />
+                        066-378-1203</p>
+                </div>
+                <div class="location-icons">
+                    <a href="https://www.facebook.com/delroy.barnies.18">
+                        <img class="location-icons-facebook" src="icons/icons8-facebook.svg">
+                    </a>
+                    <a href="https://www.instagram.com/delroy_dlb/">
+                        <img class="location-icons-instagram" src="icons/icons8-instagram.svg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="location-bottom">
+                <div class="location-email">
+                    <img class="location-email-icon" src="icons/icons8-mail.svg">
+                    <p>Delroybarnies3@gmail.com</p>
+                </div>
+                <div class="location-terms-and-conditions">
+                    <p>Terms and Conditions</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+
+        </section>
+        <a id="location-section"></a>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

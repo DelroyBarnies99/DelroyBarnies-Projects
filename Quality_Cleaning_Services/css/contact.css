@@ -1,0 +1,70 @@
+#contact{
+    width: 79%;
+    height: 692px;
+
+    background-image: url("../images/fauzan-saari-pZXg_ObLOM4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+
+    gap: 30px;
+}
+
+#contact h1{
+    font-family: serif;
+    text-align: center;
+    color: #113F06;
+    font-family: 'PT Serif', serif;
+
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.contact-email-input, .contact-textarea{
+    font-family: Inter;
+    padding-left: 20px;
+    font-size: 15px;
+
+    filter: drop-shadow(0 0 5px #000000);
+}
+
+.contact-email-input{
+    width: 400px;
+    height: 50px;
+
+    border-radius: 75px;
+    border-width: 0;
+}
+
+.contact-textarea{
+    width: 400px;
+    height: 200px;
+
+    border-radius: 30px;
+    border-width: 0;
+}
+
+#contact button{
+    font-family: Inter;
+    font-weight: bold;
+
+    width: 100px;
+    height: 40px;
+    border-radius: 75px;
+    border-width: 0;
+
+    filter: drop-shadow(2px 2px 2px black);
+    transition: ease-in-out 0.05s;
+    margin-bottom: 100px;
+}
+
+#contact button:active{
+    background-color: rgb(7, 67, 13);
+    filter: none;
+}

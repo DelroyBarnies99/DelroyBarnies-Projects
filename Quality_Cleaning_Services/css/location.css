@@ -1,0 +1,100 @@
+#location {
+    width: 79%;
+    height: 368px;
+
+    background-image: url("../images/fotor_2023-4-21_13_51_50.jpg");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: row wrap;
+
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.location-top,
+.location-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location-top {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.location-bottom {
+    margin-right: 10px;
+}
+
+.location-address {
+    display: flex;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 35px;
+    text-align: left;
+}
+
+.location-contact-num {
+    display: flex;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    line-height: 80px;
+    width: 430px;
+
+    text-align: center;
+}
+
+.location-icons img{
+    filter: brightness(0) invert(1);
+
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+.location-icons a{
+    text-decoration: none;
+}
+
+.location-icons img:active{
+    filter: brightness(0%);
+}
+
+.location-email-icon {
+    width: 30px;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+.location-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    font-family: Inter;
+    font-size: 20px;
+    color: white;
+}
+
+.location-terms-and-conditions {
+    display: flex;
+    gap: 30px;
+
+    font-family: Inter;
+    font-size: 20px;
+    color: white;
+}
