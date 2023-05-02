@@ -1,0 +1,97 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 2628px;
+    width: 100%;
+    min-width: 836px;
+
+    background-image: url(../images/fotor_2023-4-21_13_51_50.jpg);
+}
+
+#header {
+    width: 79%;
+    background-image: url("../images/lawn-mower-938555.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: row wrap;
+
+    justify-content: space-between;
+}
+
+#header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+
+#header .left-section {
+    display: flex;
+    flex: 1;
+}
+
+#header img {
+    display: flex;
+    width: 150px;
+    height: 90px;
+    padding-top: 55px ;
+    padding-left: 150px;
+
+}
+
+#header h1 {
+    position: relative;
+    font-family: serif;
+    text-align: center;
+    color: white;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 80px;
+    bottom: 100px;
+}
+
+#header .right-section{
+    display: flex;
+    padding-right: 120px;
+    padding-top: 20px;
+}
+
+#header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#header ul li {
+    margin: 0 .4rem;
+}
+
+#header ul li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+#header ul li a:hover {
+    text-decoration: underline;
+}
