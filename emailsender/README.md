@@ -5,10 +5,10 @@ and they offer services such as grass cutting and lawn maintenence.
 
 *Added in backend functionality so now you can send emails to the company by using the contact us section.
 
-I designed the web page in figma.
-Html5 and Css3 for the frontend.
-JavaScript for background video.
-Spring Boot for contact us section.
+-I designed the web page in figma.
+-Html5 and Css3 for the frontend.
+-JavaScript for background video.
+-Spring Boot for contact us section.
 
 
 ***Spring Boot 3.0 or above***
