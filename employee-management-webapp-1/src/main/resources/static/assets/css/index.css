@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 38, 38);
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+nav .heading{
+    font-size: 45px;
+    text-decoration: none;
+    color: rgb(190, 194, 206);
+    font-family: 'PT Serif', serif;
+}
+
+nav .heading:hover{
+    color: white;
+}
+
+nav .logout{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(190, 194, 206);
+}
+
+nav .logout:hover{
+    color: white;
+}
+
+.add-employee-btn{
+    display: flex;
+    width: 75%;
+    justify-content: left;
+}
+
+.add-employee-btn a{
+    background-color: rgb(15, 116, 184);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-employee-btn a:hover{
+    background-color: rgb(13, 83, 139);
+}
+
+.add-employee-btn a:active{
+    background-color: rgb(8, 57, 99);
+}
+
+table{
+    width: 75%;
+    border-color: rgb(0, 94, 255);
+    border-width: 5px;
+}
+
+table tbody tr{
+    height: 40px;
+}
+
+table thead th a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+table thead th{
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    height: 40px;
+}
+
+table thead th a:hover{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+table tbpdy td{
+    font-size: 10px;
+    font-family: 'PT Serif', serif;
+}
+
+table tbody td a{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table tbody td a:hover{
+    filter: opacity(80%)
+}
+table tbody td a:active{
+    filter: opacity(100%)
+}
+
+table tbody td .update{
+    background-color: rgb(15, 116, 184);
+}
+
+table tbody td .delete{
+    background-color: brown;
+}
+
+.pagination{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: left;
+    gap: 30px;
+
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+}
